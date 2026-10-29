@@ -1,0 +1,42 @@
+name: Funcionalidade
+description: Uma tarefa do backlog, do tamanho de um PR.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: O que deve existir quando a issue estiver pronta.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      description: Lista do que precisa funcionar para fechar a issue.
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - backend
+        - frontend
+        - infra
+        - docs
+        - test
+        - segment
+    validations:
+      required: true
+  - type: dropdown
+    id: tamanho
+    attributes:
+      label: Tamanho
+      options:
+        - P (até 1h)
+        - M (1 a 3h)
+        - G (3h ou mais)
